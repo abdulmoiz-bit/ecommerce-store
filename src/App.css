@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@300&family=Montserrat:wght@300&family=Noto+Serif:wght@700&family=Nunito+Sans:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Nunito Sans";
+}
+
+html {
+  min-width: min-content;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/*NAVBAR*/
+
+.primary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 10vh;
+  z-index: 999;
+  text-transform: uppercase;
+  background-color: rgb(0, 0, 0);
+  padding: 0rem 2rem;
+}
+.logo h3 {
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.primary-navigation a {
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.primary-navigation a:hover {
+  color: rgb(186, 179, 179);
+}
+
+.icons {
+  display: flex;
+}
+
+.icons i {
+  color: rgb(255, 255, 255);
+}
+
+.bi .bi-bag {
+  position: relative;
+}
+.black {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 20px;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .primary-navigation {
+    position: fixed;
+    inset: 0 0 0 40%;
+    z-index: 999;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2rem;
+    backdrop-filter: blur(2rem);
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+  }
+
+  .primary-navigation a {
+    color: rgb(0, 0, 0);
+  }
+  .primary-navigation[data-visible="true"] {
+    transform: translateX(0%);
+  }
+
+  .primary-navigation li {
+    padding: 8px;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    z-index: 999;
+    border: 0;
+    width: 3rem;
+    background-color: transparent;
+    border-radius: 2px;
+  }
+
+  .icons {
+    z-index: 999;
+  }
+}
+
+/* SLIDER */
+
+.carousel-image {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* PRODUCTS */
+
+.category-list {
+  padding-left: 1rem;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.category-list p {
+  cursor: pointer;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+
+.category-list p:hover {
+  color: rgb(230, 224, 218);
+}
+
+.grid-products {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.img-container {
+  text-align: center;
+}
+
+.img-container img {
+  padding: 5px 0px;
+}
+
+@media screen and (max-width: 902px) {
+  .grid-products {
+    display: list-item;
+  }
+
+  .products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    gap: 1rem;
+    grid-gap: 10px;
+    margin-left: 1.2rem;
+  }
+}
+
+.btn {
+  border-radius: 0%;
+  background-color: rgb(73, 63, 63);
+  color: white;
+}
+
+/* PRODUCT */
+
+.product {
+  min-height: 80vh;
+}
+
+/* CART */
+
+.cart {
+  min-height: 85vh;
+}
+
+.item-quantity {
+  display: flex;
+}
+
+.qty-button {
+  border-radius: 4px;
+  background-color: rgb(247, 241, 241);
+  border: 1px solid rgb(194, 184, 184);
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartbtn {
+  background-color: black;
+  border: black;
+  border-radius: 12px;
+}
+
+.subtotal {
+  padding: 0 3rem 1rem 0;
+  font-size: large;
+  font-weight: 500;
+}
+
+.qty-number {
+  padding: 0 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  background-color: black;
+  min-height: 30vh;
+  min-width: 100vw;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-text {
+  color: white;
+  position: absolute;
+  bottom: 3rem;
+  text-align: center;
+  padding: 0rem 1rem;
+}
+
+.login-container {
+  min-height: 90vh;
+}
+.signup-container {
+  min-height: 90vh;
+}
+@media screen and (min-width: 480px) {
+  .Login {
+    padding: 60px 0;
+  }
+  .Login form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}
+@media screen and (min-width: 480px) {
+  .SignUp {
+    padding: 60px 0;
+  }
+
+  .SignUp form {
+    margin: 0 auto;
+    max-width: 320px;
+  }
+}

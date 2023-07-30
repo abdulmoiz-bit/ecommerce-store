@@ -159,7 +159,7 @@ html {
   padding: 5px 0px;
 }
 
-@media screen and (max-width: 902px) {
+@media screen and (max-width: 992px) {
   .grid-products {
     display: list-item;
   }

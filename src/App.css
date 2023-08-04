@@ -7,15 +7,15 @@
 }
 
 body {
-  min-height: 100vh;
   overflow-x: hidden;
   font-family: "Nunito Sans";
+  min-width: min-content;
+  max-width: 100vw;
 }
 
 html {
-  min-width: min-content;
-  height: 100%;
   overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /*NAVBAR*/
@@ -129,8 +129,6 @@ html {
 
 .category-list p {
   cursor: pointer;
-  text-decoration: none;
-  list-style: none;
   color: black;
 }
 
@@ -162,6 +160,7 @@ html {
 @media screen and (max-width: 992px) {
   .grid-products {
     display: list-item;
+    list-style: none;
   }
 
   .products {

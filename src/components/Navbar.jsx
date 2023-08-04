@@ -30,7 +30,7 @@ export const Navbar = () => {
                 </NavLink>
                 <NavLink className="nav-link" to="/cart">
                     <i className="bi bi-bag"></i>
-                    <span className="black"> {state.length}</span>
+                   {/* <span className="black"> {state.length}</span>*/}
                 </NavLink>
                 <button className='mobile-nav-toggle' aria-controls='primary-navigation' aria-expanded="false">
                     <MenuIcon style={{ color: "white" }} />

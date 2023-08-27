@@ -1,8 +1,8 @@
 import React from 'react'
 import Products from './Products';
-import imageone from "../assets/image-one.jpg"
-import imagetwo from "../assets/image-two.jpg"
-import imagethree from "../assets/image-three.jpg"
+import imageone from "../images/image-one.jpg"
+import imagetwo from "../images/image-two.jpg"
+import imagethree from "../images/image-three.jpg"
 //import imagefour from "../assets/image-four.jpg"
 
 

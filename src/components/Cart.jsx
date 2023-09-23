@@ -5,8 +5,8 @@ import { delCart, clearCart, incCart, decCart } from './redux/action';
 import { useDispatch } from 'react-redux';
 
 
-
 const Cart = () => {
+
     const state = useSelector(state => state.handleCart)
 
     const dispatch = useDispatch()
@@ -17,8 +17,6 @@ const Cart = () => {
     const clrProducts = () => {
         dispatch(clearCart())
     }
-
-
 
     const cartItems = (cartItem) => {
 

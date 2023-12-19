@@ -5,11 +5,7 @@ import { addCart } from './redux/action';
 import { useDispatch } from 'react-redux';
 //import { useSelector } from 'react-redux';
 
-const Product = () => {
-
-  const { id } = useParams();
-  const [product, setProduct] = useState([]);
-  //const [loading, setLoading] = useState(false);
+ //const [loading, setLoading] = useState(false);
 
   //const state = useSelector((state) => state.handleCart)
 
@@ -28,12 +24,15 @@ const Product = () => {
     }
     */
 
+/*
+ 
+*/
+const Product = () => {
+
+  const { id } = useParams();
   const dispatch = useDispatch();
-
-  const addProduct = () => {
-    dispatch(addCart(product))
-  }
-
+  const [product, setProduct] = useState([]);
+ 
   useEffect(() => {
     const getProducts = async () => {
       const response = await fetch(`https://fakestoreapi.com/products/${id}`);
@@ -41,7 +40,10 @@ const Product = () => {
     }
     getProducts();
   }, []);
-
+ 
+  const addProduct = () => {
+    dispatch(addCart(product))
+  }
 
   return (
     <>
@@ -65,7 +67,7 @@ const Product = () => {
                     ${product.price}
                   </h3>
                   <p className='lead'>{product.description}</p>
-                  <button className="btn btn-dark" onClick={() => addProduct(product)}>
+                  <button className="btn btn-dark" onClick={addProduct}>
                     Add to Cart
                   </button>
                 </div>

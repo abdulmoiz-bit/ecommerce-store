@@ -12,7 +12,14 @@ const Products = () => {
 
     useEffect(() => {
         const getProducts = async () => {
-            const response = await fetch("https://fakestoreapi.com/products");
+            const response = await fetch("https://fakestoreapi.com/products",
+            {
+                method: 'GET',
+                headers: {
+                    'x-rapidapi-host': 'carbonfootprint1.p.rapidapi.com',
+                    'x-rapidapi-key': 'your_api_key'
+                }
+            });
             setData(await response.clone().json());
             setFilter(await response.json());
         }

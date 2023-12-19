@@ -8,7 +8,6 @@ import { useDispatch } from 'react-redux';
 const Cart = () => {
 
     const state = useSelector(state => state.handleCart)
-
     const dispatch = useDispatch()
 
     const delProduct = (product) => {

@@ -1,5 +1,4 @@
 // For ADD ITEM TO CART
-
 export const addCart = (product) => {
     return{
         type : "ADDITEM",

@@ -1,7 +1,4 @@
-
-
 const cart = [];
-
 
 const handleCart = (state = cart, action) => {
   const product = action.payload;
@@ -10,14 +7,11 @@ const handleCart = (state = cart, action) => {
       //Check if product is Already Exist
       const exist = state.find((item) => item.id === product.id);
       if (exist) {
-        //Increase the q uantity
+        //Increase the quantity
         return state.map((item) =>
-
-          //use of ternary operator
           item.id === product.id ? { ...item, qty: item.qty + 1 } : item
         );
       } else {
-        //const product = action.payload;
         return [
           ...state,
           {
@@ -30,7 +24,6 @@ const handleCart = (state = cart, action) => {
 
     case "DELITEM":
       const exist1 = state.find((item) => item.id === product.id);
-      //const exist1 = state.filter((x) => item.id === product.id);
       if (exist1) {
         return state.filter((item) => item.id !== exist1.id);
       } else {
@@ -71,7 +64,6 @@ const handleCart = (state = cart, action) => {
 
     default:
       return state;
-
   }
 
 };
